@@ -53,7 +53,6 @@ export const CreditsGameLanding = ({ variant }: Props) => {
 
   return (
     <div className={styles.container}>
-      <Gap size={16} />
       <CreditsGameHeroBanner />
       <Gap size={16} />
       <CreditsGameRules />
