@@ -27,6 +27,8 @@ import { CreditsGameTimer } from "../credits-game-timer";
 import { useNavigate } from "react-router";
 
 import styles from "./index.module.css";
+import { BottomSheet } from "@alfalab/core-components/bottom-sheet";
+import { CreditsGameLanding } from "../credits-game-landing";
 
 const getRandomSmiles = () => {
   const sourceArray = [0, 1, 2, 3];
@@ -56,6 +58,9 @@ export const CreditsGame = ({ variant }: Props) => {
     LS.getItem(LSKeys.MAX_ATTEMPTS, MAX_ATTEMPTS),
   );
   const [lockId, setLockId] = useState(INITIAL_LOCK_ID);
+  const [isPopupOpen, setPopupOpen] = useState(
+    LS.getItem(LSKeys.CREDITS_GAME_POPUP, true),
+  );
   const [bonusStatuses, setBonusStatuses] = useState<
     Record<BonusKeys, boolean>
   >({
@@ -323,6 +328,15 @@ export const CreditsGame = ({ variant }: Props) => {
 
   return (
     <div className={styles.layout}>
+      <BottomSheet
+        open={isPopupOpen}
+        onClose={() => {
+          setPopupOpen(false);
+          LS.setItem(LSKeys.CREDITS_GAME_POPUP, false);
+        }}
+      >
+        <CreditsGameLanding variant="infinite" />
+      </BottomSheet>
       <CreditsGameBonusStatus
         variant={variant}
         attemptCount={attemptCount}

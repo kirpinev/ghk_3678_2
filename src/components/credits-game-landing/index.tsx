@@ -12,7 +12,6 @@ import {
 import { type LandingVariant } from "../../types/credits-game";
 import { CreditsGameHeroBanner } from "../credits-game-hero-banner";
 import { CreditsGameRules } from "../credits-game-rules";
-import { CreditsGameStartButton } from "../credits-game-start-button";
 import { useNavigate } from "react-router";
 import { LS, LSKeys } from "../../ls";
 import styles from "./index.module.css";
@@ -38,17 +37,6 @@ export const CreditsGameLanding = ({ variant }: Props) => {
     navigate(`${LANDING_BONUS_HREFS[redirectUrl]}`);
   }, []);
 
-  const redirectToGame = () => {
-    LS.setItem(LSKeys.CREDITS_GAME_LANDING_CLICK, true);
-
-    window.gtag("event", "3678_start_click", {
-      variant_name: "ghk_3678_2",
-      id: LS.getItem(LSKeys.USER_UUID, ""),
-    });
-
-    navigate(`${gameVariantHref}`);
-  };
-
   useEffect(() => {
     if (!LS.getItem(LSKeys.USER_UUID, "")) {
       LS.setItem(LSKeys.USER_UUID, uuidv4());
@@ -69,8 +57,6 @@ export const CreditsGameLanding = ({ variant }: Props) => {
       <CreditsGameHeroBanner />
       <Gap size={16} />
       <CreditsGameRules />
-      <Gap size={96} />
-      <CreditsGameStartButton onClick={redirectToGame} text="Начать игру" />
     </div>
   );
 };

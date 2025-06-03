@@ -6,6 +6,7 @@ export const enum LSKeys {
   CREDITS_GAME_BONUS_VARIANT = "credits_game_bonus_variant_3678_2",
   CREDITS_GAME_FINAL_CLICK = "credits_game_final_click_3678_2",
   CREDITS_GAME_LAST_ATTEMPT = "credits_game_last_attempt_3678_2",
+  CREDITS_GAME_POPUP = "credits_game_popup_3678_2",
   NO_OPTIONS = "noOptions",
   REDUCED_RATE = "reducedRate",
   PAYMENT_DATE = "paymentDate",
@@ -30,6 +31,7 @@ export interface LSData {
   [LSKeys.MAX_ATTEMPTS]: number;
   [LSKeys.TOTAL_WIN]: boolean;
   [LSKeys.USER_UUID]: string;
+  [LSKeys.CREDITS_GAME_POPUP]: boolean;
 }
 
 const getItem = <K extends LSKeys>(
