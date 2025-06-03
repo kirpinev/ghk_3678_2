@@ -55,9 +55,10 @@ export const CreditsGameBonusStatus = ({
         onClick={() => setIsRulesModalOpen(true)}
         aria-hidden={true}
       >
+        <Gap size={16} />
         <Typography.TitleResponsive
           tag="h1"
-          view="large"
+          view="medium"
           color="primary"
           weight="bold"
         >
