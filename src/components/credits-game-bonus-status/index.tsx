@@ -61,6 +61,7 @@ export const CreditsGameBonusStatus = ({
           view="medium"
           color="primary"
           weight="bold"
+          style={{padding: "0 16px"}}
         >
           Подберите код
         </Typography.TitleResponsive>
