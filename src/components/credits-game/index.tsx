@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import  { useCallback, useEffect, useState } from "react";
 
 import { Gap } from "@alfalab/core-components/gap";
 
@@ -28,7 +28,8 @@ import { useNavigate } from "react-router";
 
 import styles from "./index.module.css";
 import { BottomSheet } from "@alfalab/core-components/bottom-sheet";
-import { CreditsGameLanding } from "../credits-game-landing";
+import { CreditsGameHeroBanner } from "../credits-game-hero-banner";
+import { Typography } from "@alfalab/core-components/typography";
 
 const getRandomSmiles = () => {
   const sourceArray = [0, 1, 2, 3];
@@ -335,7 +336,16 @@ export const CreditsGame = ({ variant }: Props) => {
           LS.setItem(LSKeys.CREDITS_GAME_POPUP, false);
         }}
       >
-        <CreditsGameLanding variant="infinite" />
+        <CreditsGameHeroBanner />
+        <Gap size={16} />
+        <Typography.TitleResponsive
+          tag="div"
+          view="medium"
+          color="primary"
+          weight="semibold"
+        >
+          Подберите код. Код состоит из 4 элементов и <i>не меняется</i>
+        </Typography.TitleResponsive>
       </BottomSheet>
       <CreditsGameBonusStatus
         variant={variant}
