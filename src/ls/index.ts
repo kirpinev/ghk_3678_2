@@ -1,20 +1,20 @@
 import { LandingBonusVariant } from "../types/credits-game";
 
 export const enum LSKeys {
-  CREDITS_GAME_LANDING_CLICK = "credits_game_landing_click_3678_2",
-  CREDITS_GAME_BONUS_CLICK = "credits_game_bonus_click_3678_2",
-  CREDITS_GAME_BONUS_VARIANT = "credits_game_bonus_variant_3678_2",
-  CREDITS_GAME_FINAL_CLICK = "credits_game_final_click_3678_2",
-  CREDITS_GAME_LAST_ATTEMPT = "credits_game_last_attempt_3678_2",
-  CREDITS_GAME_POPUP = "credits_game_popup_3678_2",
+  CREDITS_GAME_LANDING_CLICK = "credits_game_landing_click_5422_2",
+  CREDITS_GAME_BONUS_CLICK = "credits_game_bonus_click_5422_2",
+  CREDITS_GAME_BONUS_VARIANT = "credits_game_bonus_variant_5422_2",
+  CREDITS_GAME_FINAL_CLICK = "credits_game_final_click_5422_2",
+  CREDITS_GAME_LAST_ATTEMPT = "credits_game_last_attempt_5422_2",
+  CREDITS_GAME_POPUP = "credits_game_popup_5422_2",
   NO_OPTIONS = "noOptions",
   REDUCED_RATE = "reducedRate",
   PAYMENT_DATE = "paymentDate",
   PROTECTION = "protection",
   PAYMENT_SCHEDULE = "paymentSchedule",
-  MAX_ATTEMPTS = "maxAttempts_3678_2",
-  TOTAL_WIN = "total_win_3678_2",
-  USER_UUID = "userUUID_3678_2",
+  MAX_ATTEMPTS = "maxAttempts_5422_2",
+  TOTAL_WIN = "total_win_5422_2",
+  USER_UUID = "userUUID_5422_2",
 }
 
 export interface LSData {

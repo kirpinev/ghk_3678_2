@@ -30,7 +30,7 @@ export const sendDataToGA = async (payload: Payload) => {
         method: "POST",
         body: JSON.stringify({
           date,
-          variant: "ghk_3678_2",
+          variant: "ghk_5422_2",
           ...payload,
         }),
         headers: {
